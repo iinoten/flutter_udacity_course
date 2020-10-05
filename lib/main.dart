@@ -1,17 +1,12 @@
-// Copyright 2018 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Hello Rectangle',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Hello Rectangle'),
+          title: Text('HelloRectangle'),
         ),
         body: HelloRectangle(),
       ),
@@ -19,19 +14,19 @@ void main() {
   );
 }
 
-class HelloRectangle extends StatelessWidget {
+class HelloRectangle extends StatelessWidget {  // StatelessWidgetを継承
+
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        color: Colors.greenAccent,
+    return Center(  //Centerウィジェットを親要素に追加して四角いウィジェットを中央に配置
+      child: Container( //子要素に四角いのを指定
+        color: Colors.blueAccent,
         height: 400.0,
         width: 300.0,
         child: Center(
           child: Text(
             'Hello!',
-            style: TextStyle(fontSize: 40.0),
-            textAlign: TextAlign.center,
+            style: TextStyle( fontSize: 40.0 ),
           ),
         ),
       ),
