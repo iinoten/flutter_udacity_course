@@ -32,7 +32,7 @@ class Category extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.all(8.0),
         child: InkWell(
-          borderRadius: BorderRadius.circular(50.0),
+          borderRadius: BorderRadius.circular(50.0),  // InkWellに角丸を追加
           onTap: () { print('Iwas tapped!');},
           splashColor: Colors.green[400],
           highlightColor: Colors.green[400],
