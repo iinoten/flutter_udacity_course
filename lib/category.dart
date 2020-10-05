@@ -29,12 +29,10 @@ class Category extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: Build the custom widget here, referring to the Specs.
     return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(40.0)
-      ),
       child: Padding(
         padding: EdgeInsets.all(8.0),
         child: InkWell(
+          borderRadius: BorderRadius.circular(50.0),
           onTap: () { print('Iwas tapped!');},
           splashColor: Colors.green[400],
           highlightColor: Colors.green[400],
