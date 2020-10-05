@@ -14,7 +14,7 @@ final _borderRadius = BorderRadius.circular(_rowHeight / 2);
 /// The widget is composed on an [Icon] and [Text]. Tapping on the widget shows
 /// a colored [InkWell] animation.
 class Category extends StatelessWidget {
-  final String name;
+  final String name; // 引数の型を指定(nullでも通るみたい(だから後でnullじゃないかのチェックが要る))
   final ColorSwatch color;
   final IconData iconLocation;
   /// Creates a [Category].
@@ -24,10 +24,10 @@ class Category extends StatelessWidget {
   // TODO: You'll need the name, color, and iconLocation from main.dart
   const Category({
     Key key,
-    @required this.name,
+    @required this.name,  //@requiredで必須の引数にする
     @required this.color,
     @required this.iconLocation,
-  }): assert(name != null),
+  }): assert(name != null), //引数の中身がnullではないかどうかを見てる
       assert(color != null),
       assert(iconLocation != null),
       super(key: key);
