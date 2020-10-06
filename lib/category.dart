@@ -42,34 +42,37 @@ class Category extends StatelessWidget {
   // See https://docs.flutter.io/flutter/material/Theme-class.html
   Widget build(BuildContext context) {
     // TODO: Build the custom widget here, referring to the Specs.
-    return Container(
-      height: _rowHeight,
-      child: Padding(
-        padding: EdgeInsets.all(8.0),
-        child: InkWell(
-          borderRadius: _borderRadius,  // InkWellに角丸を追加
-          onTap: () { print('Iwas tapped!');},
-          splashColor: Colors.green[400],
-          highlightColor: Colors.green[400],
-          child: Row(
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Icon(
-                    iconLocation, 
-                    size: 60.0, 
-                  ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Text(
-                  'Cake',
-                  style: TextStyle(
-                    fontSize: 24
-                  ),
+    return Material(
+      color: Colors.transparent,
+      child: Container(
+        height: _rowHeight,
+        child: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: InkWell(
+            borderRadius: _borderRadius,  // InkWellに角丸を追加
+            onTap: () { print('Iwas tapped!');},
+            splashColor: color,
+            highlightColor: color,
+            child: Row(
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Icon(
+                      iconLocation, 
+                      size: 60.0, 
+                    ),
                 ),
-              )
-            ],
+                Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text(
+                    name,
+                    style: TextStyle(
+                      fontSize: 24
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
